@@ -14,11 +14,40 @@ final class RMService {
         
     }
     
+    enum RMServiceError: Error {
+        case badUrl
+        case failedToGetData
+    }
+    
     public func execute<T: Codable>(
         _ request: RMRequest,
         expecting type: T.Type,
         completion: @escaping (Result<T, Error>) -> Void
     ) {
+        guard let urlRequest = self.request(from: request) else {
+            completion(.failure(RMServiceError.badUrl))
+            return
+        }
         
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, _, error in
+            guard let data, error == nil else {
+                completion(.failure(error ?? RMServiceError.failedToGetData))
+                return
+            }
+            
+            do {
+                let result = try JSONDecoder().decode(type, from: data)
+                completion(.success(result))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
+    
+    private func request(from rawRequest: RMRequest) -> URLRequest? {
+        guard let url = rawRequest.url else {return nil}
+        let request = URLRequest(url: url)
+        return request
     }
 }

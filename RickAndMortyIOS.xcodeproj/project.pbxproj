@@ -22,6 +22,22 @@
 		53BFD4C12BB7F98200AA12BC /* RMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BFD4C02BB7F98200AA12BC /* RMService.swift */; };
 		53BFD4C32BB7F98F00AA12BC /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BFD4C22BB7F98F00AA12BC /* RMRequest.swift */; };
 		53BFD4C52BB7F9E100AA12BC /* RMEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BFD4C42BB7F9E100AA12BC /* RMEndpoint.swift */; };
+		53F398A32BC13D2F005FDDD6 /* GetAllCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F398A22BC13D2F005FDDD6 /* GetAllCharactersResponse.swift */; };
+		53F398A52BC1410E005FDDD6 /* CharacterListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F398A42BC1410E005FDDD6 /* CharacterListViewViewModel.swift */; };
+		53F398A72BC1416D005FDDD6 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F398A62BC1416D005FDDD6 /* CharacterListView.swift */; };
+		53F398AA2BC14223005FDDD6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398A92BC14223005FDDD6 /* SnapKit */; };
+		53F398AC2BC14223005FDDD6 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398AB2BC14223005FDDD6 /* SnapKit-Dynamic */; };
+		53F398AF2BC14259005FDDD6 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398AE2BC14259005FDDD6 /* RxBlocking */; };
+		53F398B12BC14259005FDDD6 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398B02BC14259005FDDD6 /* RxBlocking-Dynamic */; };
+		53F398B32BC14259005FDDD6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398B22BC14259005FDDD6 /* RxCocoa */; };
+		53F398B52BC14259005FDDD6 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398B42BC14259005FDDD6 /* RxCocoa-Dynamic */; };
+		53F398B72BC14259005FDDD6 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398B62BC14259005FDDD6 /* RxRelay */; };
+		53F398B92BC1487B005FDDD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F398B82BC1487B005FDDD6 /* Extensions.swift */; };
+		53F398BC2BC14D7D005FDDD6 /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398BB2BC14D7D005FDDD6 /* Differentiator */; };
+		53F398BE2BC14D7D005FDDD6 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 53F398BD2BC14D7D005FDDD6 /* RxDataSources */; };
+		53F398C12BC1551A005FDDD6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F398C02BC1551A005FDDD6 /* ActivityIndicator.swift */; };
+		53F398C32BC15653005FDDD6 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F398C22BC15653005FDDD6 /* CharacterCollectionViewCell.swift */; };
+		53F398C52BC156FB005FDDD6 /* CharacterCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F398C42BC156FB005FDDD6 /* CharacterCollectionViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +58,13 @@
 		53BFD4C02BB7F98200AA12BC /* RMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMService.swift; sourceTree = "<group>"; };
 		53BFD4C22BB7F98F00AA12BC /* RMRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRequest.swift; sourceTree = "<group>"; };
 		53BFD4C42BB7F9E100AA12BC /* RMEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEndpoint.swift; sourceTree = "<group>"; };
+		53F398A22BC13D2F005FDDD6 /* GetAllCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharactersResponse.swift; sourceTree = "<group>"; };
+		53F398A42BC1410E005FDDD6 /* CharacterListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewViewModel.swift; sourceTree = "<group>"; };
+		53F398A62BC1416D005FDDD6 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		53F398B82BC1487B005FDDD6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		53F398C02BC1551A005FDDD6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		53F398C22BC15653005FDDD6 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		53F398C42BC156FB005FDDD6 /* CharacterCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +72,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F398AA2BC14223005FDDD6 /* SnapKit in Frameworks */,
+				53F398AF2BC14259005FDDD6 /* RxBlocking in Frameworks */,
+				53F398B72BC14259005FDDD6 /* RxRelay in Frameworks */,
+				53F398B32BC14259005FDDD6 /* RxCocoa in Frameworks */,
+				53F398BC2BC14D7D005FDDD6 /* Differentiator in Frameworks */,
+				53F398AC2BC14223005FDDD6 /* SnapKit-Dynamic in Frameworks */,
+				53F398BE2BC14D7D005FDDD6 /* RxDataSources in Frameworks */,
+				53F398B52BC14259005FDDD6 /* RxCocoa-Dynamic in Frameworks */,
+				53F398B12BC14259005FDDD6 /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				53BFD4BD2BB7F24000AA12BC /* Features */,
+				53BFD4A22BB7EC2100AA12BC /* Info.plist */,
 				53BFD4AF2BB7F11B00AA12BC /* ViewControllers */,
 				53BFD4AE2BB7F10F00AA12BC /* Models */,
 				53BFD4AD2BB7F10900AA12BC /* Views */,
@@ -83,11 +116,6 @@
 				53BFD4AA2BB7F0DE00AA12BC /* Managers */,
 				53BFD4A92BB7F0D400AA12BC /* Resources */,
 				53BFD4A82BB7F08500AA12BC /* Features */,
-				53BFD4942BB7EC1F00AA12BC /* AppDelegate.swift */,
-				53BFD4962BB7EC1F00AA12BC /* SceneDelegate.swift */,
-				53BFD49D2BB7EC2100AA12BC /* Assets.xcassets */,
-				53BFD49F2BB7EC2100AA12BC /* LaunchScreen.storyboard */,
-				53BFD4A22BB7EC2100AA12BC /* Info.plist */,
 			);
 			path = RickAndMortyIOS;
 			sourceTree = "<group>";
@@ -102,6 +130,12 @@
 		53BFD4A92BB7F0D400AA12BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				53F398BF2BC15507005FDDD6 /* Rx */,
+				53BFD4942BB7EC1F00AA12BC /* AppDelegate.swift */,
+				53BFD4962BB7EC1F00AA12BC /* SceneDelegate.swift */,
+				53BFD49D2BB7EC2100AA12BC /* Assets.xcassets */,
+				53BFD49F2BB7EC2100AA12BC /* LaunchScreen.storyboard */,
+				53F398B82BC1487B005FDDD6 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -126,6 +160,8 @@
 		53BFD4AC2BB7F10300AA12BC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				53F398A42BC1410E005FDDD6 /* CharacterListViewViewModel.swift */,
+				53F398C42BC156FB005FDDD6 /* CharacterCollectionViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -133,6 +169,8 @@
 		53BFD4AD2BB7F10900AA12BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53F398A62BC1416D005FDDD6 /* CharacterListView.swift */,
+				53F398C22BC15653005FDDD6 /* CharacterCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,9 +178,8 @@
 		53BFD4AE2BB7F10F00AA12BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				53BFD4B02BB7F14500AA12BC /* Location.swift */,
-				53BFD4B22BB7F15000AA12BC /* Character.swift */,
-				53BFD4B42BB7F16C00AA12BC /* Episode.swift */,
+				53F398A12BC13D07005FDDD6 /* ResponseTypes */,
+				53F398A02BC13CFB005FDDD6 /* DataTypes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +203,32 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		53F398A02BC13CFB005FDDD6 /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				53BFD4B02BB7F14500AA12BC /* Location.swift */,
+				53BFD4B22BB7F15000AA12BC /* Character.swift */,
+				53BFD4B42BB7F16C00AA12BC /* Episode.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		53F398A12BC13D07005FDDD6 /* ResponseTypes */ = {
+			isa = PBXGroup;
+			children = (
+				53F398A22BC13D2F005FDDD6 /* GetAllCharactersResponse.swift */,
+			);
+			path = ResponseTypes;
+			sourceTree = "<group>";
+		};
+		53F398BF2BC15507005FDDD6 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				53F398C02BC1551A005FDDD6 /* ActivityIndicator.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +245,17 @@
 			dependencies = (
 			);
 			name = RickAndMortyIOS;
+			packageProductDependencies = (
+				53F398A92BC14223005FDDD6 /* SnapKit */,
+				53F398AB2BC14223005FDDD6 /* SnapKit-Dynamic */,
+				53F398AE2BC14259005FDDD6 /* RxBlocking */,
+				53F398B02BC14259005FDDD6 /* RxBlocking-Dynamic */,
+				53F398B22BC14259005FDDD6 /* RxCocoa */,
+				53F398B42BC14259005FDDD6 /* RxCocoa-Dynamic */,
+				53F398B62BC14259005FDDD6 /* RxRelay */,
+				53F398BB2BC14D7D005FDDD6 /* Differentiator */,
+				53F398BD2BC14D7D005FDDD6 /* RxDataSources */,
+			);
 			productName = RickAndMortyIOS;
 			productReference = 53BFD4912BB7EC1F00AA12BC /* RickAndMortyIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -210,6 +284,11 @@
 				Base,
 			);
 			mainGroup = 53BFD4882BB7EC1F00AA12BC;
+			packageReferences = (
+				53F398A82BC14223005FDDD6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				53F398AD2BC14258005FDDD6 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				53F398BA2BC14D7D005FDDD6 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+			);
 			productRefGroup = 53BFD4922BB7EC1F00AA12BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,17 +316,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				53BFD4B92BB7F1F000AA12BC /* RMLocationViewController.swift in Sources */,
+				53F398C52BC156FB005FDDD6 /* CharacterCollectionViewCellViewModel.swift in Sources */,
 				53BFD4992BB7EC1F00AA12BC /* RMTabViewController.swift in Sources */,
 				53BFD4B52BB7F16C00AA12BC /* Episode.swift in Sources */,
 				53BFD4BB2BB7F1FE00AA12BC /* RMEpisodeViewController.swift in Sources */,
 				53BFD4952BB7EC1F00AA12BC /* AppDelegate.swift in Sources */,
 				53BFD4B32BB7F15000AA12BC /* Character.swift in Sources */,
+				53F398A72BC1416D005FDDD6 /* CharacterListView.swift in Sources */,
 				53BFD4BF2BB7F2F900AA12BC /* RMSettingsViewController.swift in Sources */,
 				53BFD4C12BB7F98200AA12BC /* RMService.swift in Sources */,
+				53F398A52BC1410E005FDDD6 /* CharacterListViewViewModel.swift in Sources */,
 				53BFD4B12BB7F14500AA12BC /* Location.swift in Sources */,
+				53F398C32BC15653005FDDD6 /* CharacterCollectionViewCell.swift in Sources */,
+				53F398A32BC13D2F005FDDD6 /* GetAllCharactersResponse.swift in Sources */,
 				53BFD4C52BB7F9E100AA12BC /* RMEndpoint.swift in Sources */,
 				53BFD4972BB7EC1F00AA12BC /* SceneDelegate.swift in Sources */,
+				53F398B92BC1487B005FDDD6 /* Extensions.swift in Sources */,
 				53BFD4C32BB7F98F00AA12BC /* RMRequest.swift in Sources */,
+				53F398C12BC1551A005FDDD6 /* ActivityIndicator.swift in Sources */,
 				53BFD4B72BB7F1D700AA12BC /* RMCharacterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +547,81 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		53F398A82BC14223005FDDD6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		53F398AD2BC14258005FDDD6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+		53F398BA2BC14D7D005FDDD6 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53F398A92BC14223005FDDD6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398A82BC14223005FDDD6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		53F398AB2BC14223005FDDD6 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398A82BC14223005FDDD6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		53F398AE2BC14259005FDDD6 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398AD2BC14258005FDDD6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		53F398B02BC14259005FDDD6 /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398AD2BC14258005FDDD6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		53F398B22BC14259005FDDD6 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398AD2BC14258005FDDD6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		53F398B42BC14259005FDDD6 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398AD2BC14258005FDDD6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		53F398B62BC14259005FDDD6 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398AD2BC14258005FDDD6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		53F398BB2BC14D7D005FDDD6 /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398BA2BC14D7D005FDDD6 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		53F398BD2BC14D7D005FDDD6 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53F398BA2BC14D7D005FDDD6 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 53BFD4892BB7EC1F00AA12BC /* Project object */;
 }

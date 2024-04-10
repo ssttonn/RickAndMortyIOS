@@ -17,5 +17,387 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D941D29-C97A-4DDC-BB8B-BDE4167772F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/Views/CharacterListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "bindViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B4C5C0D-7045-480E-8FE0-8874E2B38C3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchAllCharacters()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2641443F-5575-4D9E-99C9-FCBEE5C1702F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchAllCharacters()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2641443F-5575-4D9E-99C9-FCBEE5C1702F - c338b51e88bd1bf9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;RickAndMortyIOS.GetAllCharactersResponse, Swift.Error&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;) -&gt; RxSwift.Disposable in RickAndMortyIOS.CharacterListViewViewModel.fetchCharacter() -&gt; RxSwift.Observable&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  uuid = "2641443F-5575-4D9E-99C9-FCBEE5C1702F - c338b51e88bd1bf9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;RickAndMortyIOS.GetAllCharactersResponse, Swift.Error&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;) -&gt; RxSwift.Disposable in RickAndMortyIOS.CharacterListViewViewModel.fetchCharacter() -&gt; RxSwift.Observable&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "428">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38EF1F7D-B61D-4198-BBB6-1C1329A4C6A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ApiClient/RMService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "execute(_:expecting:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D9B6A52-AFFF-457F-A04D-D8EDAF870FDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ApiClient/RMService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "execute(_:expecting:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62517141-B2BA-4DAE-8CA6-F33677800021"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ApiClient/RMService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "execute(_:expecting:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C85CAA2B-04DB-483E-9F6C-71F2DAFB9E2C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "fetchAllCharacters()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C85CAA2B-04DB-483E-9F6C-71F2DAFB9E2C - 6632828856182da1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMortyIOS.CharacterListViewViewModel.fetchCharacter() -&gt; RxSwift.Observable&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "C85CAA2B-04DB-483E-9F6C-71F2DAFB9E2C - 46b1a933ea8b3281"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;) -&gt; RxSwift.Disposable in RickAndMortyIOS.CharacterListViewViewModel.fetchCharacter() -&gt; RxSwift.Observable&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5EA92E1-C1AA-4621-BFDA-0F1DC4B703BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ApiClient/RMService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "execute(_:expecting:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5EA92E1-C1AA-4621-BFDA-0F1DC4B703BE - 611599c83eb89c2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMortyIOS.RMService.execute&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(_: RickAndMortyIOS.RMRequest, expecting: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ApiClient/RMService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  uuid = "F5EA92E1-C1AA-4621-BFDA-0F1DC4B703BE - 8094955738f218aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in RickAndMortyIOS.RMService.execute&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(_: RickAndMortyIOS.RMRequest, expecting: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ApiClient/RMService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76ABA343-C356-46D2-93E5-C96D24AF22FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ApiClient/RMService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "execute(_:expecting:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E1C751F-C552-4CF0-8757-6D09E7DEFA27"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchAllCharacters()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8E1C751F-C552-4CF0-8757-6D09E7DEFA27 - c338b51e88bd1c3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;RickAndMortyIOS.GetAllCharactersResponse, Swift.Error&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;) -&gt; RxSwift.Disposable in RickAndMortyIOS.CharacterListViewViewModel.fetchCharacter() -&gt; RxSwift.Observable&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "8E1C751F-C552-4CF0-8757-6D09E7DEFA27 - c338b51e88bd1c3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;RickAndMortyIOS.GetAllCharactersResponse, Swift.Error&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;) -&gt; RxSwift.Disposable in RickAndMortyIOS.CharacterListViewViewModel.fetchCharacter() -&gt; RxSwift.Observable&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "8E1C751F-C552-4CF0-8757-6D09E7DEFA27 - 46b1a933ea8b320d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;) -&gt; RxSwift.Disposable in RickAndMortyIOS.CharacterListViewViewModel.fetchCharacter() -&gt; RxSwift.Observable&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "8E1C751F-C552-4CF0-8757-6D09E7DEFA27 - c338b51e88bd1c1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;RickAndMortyIOS.GetAllCharactersResponse, Swift.Error&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;) -&gt; RxSwift.Disposable in RickAndMortyIOS.CharacterListViewViewModel.fetchCharacter() -&gt; RxSwift.Observable&lt;RickAndMortyIOS.GetAllCharactersResponse&gt;"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4C2BDC2-6CC8-4E8D-B0F0-CB4F71A004F4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/Views/CharacterCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28809D4D-2261-430B-8DCC-F438BF634635"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/ViewModels/CharacterCollectionViewCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchImage(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28809D4D-2261-430B-8DCC-F438BF634635 - b7cca2211d8b129c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMortyIOS.CharacterCollectionViewCellViewModel.fetchImage(completion: (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterCollectionViewCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  uuid = "28809D4D-2261-430B-8DCC-F438BF634635 - 4a1fe970f511921b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in RickAndMortyIOS.CharacterCollectionViewCellViewModel.fetchImage(completion: (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sstonn/RickAndMortyIOS/RickAndMortyIOS/ViewModels/CharacterCollectionViewCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -13,3 +13,4 @@ import Foundation
     case location
     case episode
 }
+
