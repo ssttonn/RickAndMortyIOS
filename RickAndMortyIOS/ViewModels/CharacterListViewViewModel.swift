@@ -11,18 +11,19 @@ import RxCocoa
 
 struct CharacterListViewViewModel {
     struct Input {
-        var fetchCharactersStream: Observable<Void>
+        var fetchCharactersStream: Observable<Int>
     }
     
     struct Output {
-        var charactersStream: Driver<[CharacterCollectionViewCellViewModel]>
+        var characterResponseStream: Driver<GetAllCharactersResponse>
         var isLoadingStream: Driver<Bool>
     }
     
-    private func fetchAllCharacters() -> Observable<GetAllCharactersResponse> {
+    private func fetchCharacters(page: Int) -> Observable<GetAllCharactersResponse> {
         return Observable.create { observer in
             let request = RMRequest(
-                endpoint: .character
+                endpoint: .character,
+                queryParameters: [URLQueryItem(name: "page", value: "\(page)")]
             )
             RMService.shared.execute(request, expecting: GetAllCharactersResponse.self) { result in
                 switch result {
@@ -40,19 +41,19 @@ struct CharacterListViewViewModel {
     
     func transform(input: Input) -> Output {
         let activityIndicator = ActivityIndicator()
-        
-        let characterResponseStream = input.fetchCharactersStream.flatMapLatest {
-            fetchAllCharacters()
-        }.share().trackActivity(activityIndicator)
+        let characterResponseStream = input.fetchCharactersStream
+            .flatMapLatest { page in
+                self.fetchCharacters(page: page)
+                    .trackActivity(activityIndicator)
+                    .asObservable()
+            }
+            .share()
         
         return Output(
-            charactersStream: characterResponseStream.map{$0.results}.map {
-                $0.map {CharacterCollectionViewCellViewModel(
-                    characterName: $0.name,
-                    characterStatus: $0.status,
-                    characterImageUrl: URL(string: $0.image)
-                )}
-            }.asDriver(onErrorJustReturn: []),
+            characterResponseStream: characterResponseStream.asDriver(
+                onErrorJustReturn:
+                    GetAllCharactersResponse.empty
+            ),
             isLoadingStream: activityIndicator.asDriver(onErrorJustReturn: false)
         )
     }

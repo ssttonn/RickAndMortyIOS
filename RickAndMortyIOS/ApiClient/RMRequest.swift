@@ -52,4 +52,11 @@ final class RMRequest {
         self.pathComponents = pathComponents
         self.queryParameters = queryParameters
     }
+    
+    public init?(url: URL) {
+        guard let endpoint = RMEndpoint(rawValue: url.lastPathComponent) else {return nil}
+        self.endpoint = endpoint
+        self.pathComponents = url.pathComponents.dropFirst(2).map {String($0)}
+        self.queryParameters = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
+    }
 }

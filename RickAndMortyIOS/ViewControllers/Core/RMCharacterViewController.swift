@@ -32,6 +32,15 @@ final class RMCharacterViewController: UIViewController {
     }
     
     private func bindViews() {
-        
+        self.characterListView.delegate = self
+    }
+}
+
+extension RMCharacterViewController: CharacterListViewDelegate {
+    func didSelectCharacter(character: Character) {
+        let viewModel = CharacterDetailViewModel(character: character)
+        let characterDetailViewController = RMCharacterDetailsViewController(viewModel: viewModel)
+        characterDetailViewController.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(characterDetailViewController, animated: true)
     }
 }

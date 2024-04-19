@@ -17,5 +17,9 @@ struct GetAllCharactersResponse: Codable {
     
     let results: [Character]
     let info: Info
+    
+    static var empty: GetAllCharactersResponse {
+        return GetAllCharactersResponse(results: [], info: Info(count: 0, pages: 0, next: "", prev: ""))
+    }
 }
 
