@@ -17,6 +17,28 @@ struct CharacterDetailViewModel {
         self.character = character
     }
     
+    public enum SectionType {
+        case photo(viewModel: CharacterPhotoCellViewModel)
+        case information(viewModels: [CharacterInfoCellViewModel])
+        case episodes(viewModels: [CharacterEpisodeCellViewModel])
+    }
+    
+    public let sections: [SectionType] = [
+        .photo(viewModel: .init()),
+        .information(viewModels: [
+            .init(),
+            .init(),
+            .init(),
+            .init()
+        ]),
+        .episodes(viewModels: [
+            .init(),
+            .init(),
+            .init(),
+            .init()
+        ])
+    ]
+    
     public var requestUrl: URL? {
         return URL(string: character.url)
     }

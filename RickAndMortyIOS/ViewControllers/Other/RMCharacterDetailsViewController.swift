@@ -12,11 +12,12 @@ final class RMCharacterDetailsViewController: UIViewController {
     
     private let viewModel: CharacterDetailViewModel
     
-    private let detailView = CharacterDetailView()
+    private let detailView: CharacterDetailView
     private let disposeBag = DisposeBag()
     
     init(viewModel: CharacterDetailViewModel){
         self.viewModel = viewModel
+        self.detailView = CharacterDetailView(frame: .zero, viewModel: viewModel)
         super.init(nibName: nil, bundle: nil)
     }
     

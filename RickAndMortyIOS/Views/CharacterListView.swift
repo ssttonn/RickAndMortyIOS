@@ -33,8 +33,7 @@ final class CharacterListView: UIView {
         collectionView.isHidden = true
         collectionView.alpha = 0
         collectionView.register(
-            CharacterCollectionViewCell.self,
-            forCellWithReuseIdentifier: CharacterCollectionViewCell.cellIdentifier
+            CharacterCollectionViewCell.self
         )
         collectionView.register(
             FooterLoadingCollectionReusableView.self,
@@ -117,7 +116,10 @@ extension CharacterListView: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.cellIdentifier, for: indexPath) as? CharacterCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(
+            CharacterCollectionViewCell.self,
+            for: indexPath
+        ) else {
             return UICollectionViewCell()
         }
         let character = characters.results[indexPath.row]
