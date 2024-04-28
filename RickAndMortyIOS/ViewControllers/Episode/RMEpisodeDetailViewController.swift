@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import RxSwift
 
 class RMEpisodeDetailViewController: UIViewController {
+    private let disposeBag = DisposeBag()
     
-    private let url: URL?
+    private let detailView: EpisodeDetailView = {
+        let view = EpisodeDetailView()
+        return view
+    }()
+    private let viewModel: EpisodeDetailViewModel
     
     init(url: URL?) {
-        self.url = url
+        self.viewModel = EpisodeDetailViewModel(episodeDataUrl: url)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,10 +28,34 @@ class RMEpisodeDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        // Do any additional setup after loading the view.
+        setupSubviews()
+        setupViewConstraints()
+        bindViews()
+        visualizeViews()
     }
     
+    private func setupSubviews() {
+        view.addSubview(detailView)
+    }
 
-
+    private func setupViewConstraints() {
+        detailView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    private func visualizeViews() {
+        view.backgroundColor = .systemBackground
+    }
+    
+    private func bindViews(){
+        let input = EpisodeDetailViewModel.Input(fetchEpisodeStream: rx.viewDidAppear.mapToVoid().take(1))
+        
+        let output = viewModel.transform(input: input)
+        
+        output.episode.drive(onNext: { [weak self] episode in
+            guard let self else {return}
+            detailView.configure(with: episode)
+        }).disposed(by: disposeBag)
+    }
 }

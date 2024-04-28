@@ -11,11 +11,18 @@ class CharacterEpisodeCellViewModel {
     let episodeDataUrl: URL?
     private var isFetching = false
     
+    private var episode: Episode?
+    
     init(episodeDataUrl: URL?) {
         self.episodeDataUrl = episodeDataUrl
     }
     
     public func fetchEpisode(completion: @escaping (Result<Episode, Error>) -> Void) {
+        if let episode {
+            completion(.success(episode))
+            return
+        }
+        
         guard !isFetching else {return}
         
         isFetching = true
@@ -30,6 +37,7 @@ class CharacterEpisodeCellViewModel {
             guard let self else {return}
             switch result {
             case .success(let episode):
+                self.episode = episode
                 completion(.success(episode))
             case .failure(let error):
                 completion(.failure(error))

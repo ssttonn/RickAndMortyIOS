@@ -73,10 +73,6 @@ struct CharacterDetailViewModel {
     
     private func fetchCharacter() -> Observable<Character> {
         return Observable.create { observer in
-            guard let requestUrl else {
-                observer.onError(URLError(.badURL))
-                return Disposables.create()
-            }
             
             let request = RMRequest(
                 endpoint: .character,
