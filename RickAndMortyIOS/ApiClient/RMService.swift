@@ -10,6 +10,8 @@ import Foundation
 final class RMService {
     static let shared = RMService()
     
+    private let cacheManager = APICacheManager.shared
+    
     private init() {
         
     }
@@ -24,19 +26,32 @@ final class RMService {
         expecting type: T.Type,
         completion: @escaping (Result<T, Error>) -> Void
     ) {
+        if let url = request.url, let cachedData = cacheManager.cachedData(for: request.endpoint, key: url.absoluteString) {
+            do {
+                let result = try JSONDecoder().decode(type, from: cachedData)
+                completion(.success(result))
+            } catch {
+                completion(.failure(error))
+            }
+            return
+        }
+        
         guard let urlRequest = self.request(from: request) else {
             completion(.failure(RMServiceError.badUrl))
             return
         }
         
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, _, error in
-            guard let data, error == nil else {
+        let task = URLSession.shared.dataTask(with: urlRequest) {[weak self] data, _, error in
+            guard let data, error == nil, let self else {
                 completion(.failure(error ?? RMServiceError.failedToGetData))
                 return
             }
             
             do {
                 let result = try JSONDecoder().decode(type, from: data)
+                if let url = request.url {
+                    cacheManager.cacheData(for: request.endpoint, key: url.absoluteString, data: data)
+                }
                 completion(.success(result))
             } catch {
                 completion(.failure(error))

@@ -7,6 +7,34 @@
 
 import Foundation
 
-struct CharacterEpisodeCellViewModel {
+class CharacterEpisodeCellViewModel {
+    let episodeDataUrl: URL?
+    private var isFetching = false
     
+    init(episodeDataUrl: URL?) {
+        self.episodeDataUrl = episodeDataUrl
+    }
+    
+    public func fetchEpisode(completion: @escaping (Result<Episode, Error>) -> Void) {
+        guard !isFetching else {return}
+        
+        isFetching = true
+        guard let episodeDataUrl else {
+            completion(.failure(URLError(.badURL)))
+            return
+        }
+        
+        let request = RMRequest(endpoint: .episode, pathComponents: [episodeDataUrl.lastPathComponent])
+        
+        RMService.shared.execute(request, expecting: Episode.self) { [weak self] result in
+            guard let self else {return}
+            switch result {
+            case .success(let episode):
+                completion(.success(episode))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+            isFetching = false
+        }
+    }
 }

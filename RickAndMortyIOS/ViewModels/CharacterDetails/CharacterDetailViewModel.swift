@@ -23,20 +23,21 @@ struct CharacterDetailViewModel {
         case episodes(viewModels: [CharacterEpisodeCellViewModel])
     }
     
-    public let sections: [SectionType] = [
-        .photo(viewModel: .init()),
+    public lazy var sections: [SectionType] = [
+        .photo(viewModel: .init(imageUrl: URL(string: character.image))),
         .information(viewModels: [
-            .init(),
-            .init(),
-            .init(),
-            .init()
+            .init(type: .status, value: character.status.rawValue),
+            .init(type: .gender, value: character.gender.rawValue),
+            .init(type: .type, value: character.type),
+            .init(type: .species, value: character.species),
+            .init(type: .origin, value: character.origin.name),
+            .init(type: .location, value: character.location.name),
+            .init(type: .created, value: character.created),
+            .init(type: .totalEpisodes, value: character.episode.count.description)
         ]),
-        .episodes(viewModels: [
-            .init(),
-            .init(),
-            .init(),
-            .init()
-        ])
+        .episodes(viewModels: character.episode.map {episode in
+            .init(episodeDataUrl: URL(string: episode))
+        })
     ]
     
     public var requestUrl: URL? {

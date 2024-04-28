@@ -524,6 +524,21 @@
                   endingLineNumber = "27"
                   offsetFromSymbolStart = "576">
                </Location>
+               <Location
+                  uuid = "7AC490B8-78C2-457B-9883-AFE90EA0354B - e488fe8c6c0b5d89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in RickAndMortyIOS.ImageLoaderManager.downloadImage(_: Foundation.URL, completion: (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RickAndMortyIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/sstonn/PersonalProjects/Mobile/IOS/RickAndMortyIOS/RickAndMortyIOS/Managers/ImageLoaderManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "576">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -668,6 +683,22 @@
             startingLineNumber = "73"
             endingLineNumber = "73"
             landmarkName = "fetchCharacter()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE3F83C5-27FA-48FA-A517-342FE865C89F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMortyIOS/Views/CharacterDetails/Cells/CharacterInfoCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "configure(viewModel:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

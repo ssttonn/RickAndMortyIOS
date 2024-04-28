@@ -52,6 +52,8 @@
 		53F4925F2BD2584500ABC23D /* CharacterInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4925B2BD2584500ABC23D /* CharacterInfoCellViewModel.swift */; };
 		53F492602BD2584500ABC23D /* CharacterEpisodeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4925C2BD2584500ABC23D /* CharacterEpisodeCellViewModel.swift */; };
 		53F492612BD2584500ABC23D /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4925D2BD2584500ABC23D /* CharacterDetailViewModel.swift */; };
+		D11FD11F2BDDD9FF00D37FB3 /* RMEpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11FD11E2BDDD9FF00D37FB3 /* RMEpisodeDetailViewController.swift */; };
+		D11FD1212BDDDBF100D37FB3 /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11FD1202BDDDBF100D37FB3 /* APICacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		53F4925B2BD2584500ABC23D /* CharacterInfoCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoCellViewModel.swift; sourceTree = "<group>"; };
 		53F4925C2BD2584500ABC23D /* CharacterEpisodeCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterEpisodeCellViewModel.swift; sourceTree = "<group>"; };
 		53F4925D2BD2584500ABC23D /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		D11FD11E2BDDD9FF00D37FB3 /* RMEpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		D11FD1202BDDDBF100D37FB3 /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				53B085A32BD1067B009B05D7 /* ImageLoaderManager.swift */,
+				D11FD1202BDDDBF100D37FB3 /* APICacheManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 		53BFD4AF2BB7F11B00AA12BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D11FD11D2BDDD9E200D37FB3 /* Episode */,
 				53C3AFCC2BCEA80800BE5C97 /* Other */,
 				53C3AFCB2BCEA7FA00BE5C97 /* Core */,
 			);
@@ -343,6 +349,14 @@
 			path = CharacterDetails;
 			sourceTree = "<group>";
 		};
+		D11FD11D2BDDD9E200D37FB3 /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				D11FD11E2BDDD9FF00D37FB3 /* RMEpisodeDetailViewController.swift */,
+			);
+			path = Episode;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -446,6 +460,7 @@
 				53F492562BD2583B00ABC23D /* CharacterEpisodeCollectionViewCell.swift in Sources */,
 				53B085A42BD1067B009B05D7 /* ImageLoaderManager.swift in Sources */,
 				53D344F52BD25FAB00492C08 /* Extensions+UICollectionViewCell.swift in Sources */,
+				D11FD1212BDDDBF100D37FB3 /* APICacheManager.swift in Sources */,
 				53F398A72BC1416D005FDDD6 /* CharacterListView.swift in Sources */,
 				53BFD4BF2BB7F2F900AA12BC /* RMSettingsViewController.swift in Sources */,
 				53F492582BD2583B00ABC23D /* CharacterDetailView.swift in Sources */,
@@ -459,6 +474,7 @@
 				53BFD4C52BB7F9E100AA12BC /* RMEndpoint.swift in Sources */,
 				53BFD4972BB7EC1F00AA12BC /* SceneDelegate.swift in Sources */,
 				53F398B92BC1487B005FDDD6 /* Extensions.swift in Sources */,
+				D11FD11F2BDDD9FF00D37FB3 /* RMEpisodeDetailViewController.swift in Sources */,
 				53BFD4C32BB7F98F00AA12BC /* RMRequest.swift in Sources */,
 				53F4925E2BD2584500ABC23D /* CharacterPhotoCellViewModel.swift in Sources */,
 				53F398C12BC1551A005FDDD6 /* ActivityIndicator.swift in Sources */,

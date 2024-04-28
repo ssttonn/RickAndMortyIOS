@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CharacterDetailViewDelegate: AnyObject {
+    func didTapEpisode(episodeUrl: URL?)
+}
+
 class CharacterDetailView: UIView {
+    public weak var delegate: CharacterDetailViewDelegate?
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewCompositionalLayout { [weak self] sectionIndex, _ in
             guard let self else { return nil }
@@ -98,7 +104,7 @@ class CharacterDetailView: UIView {
         return spinner
     }()
     
-    private let viewModel: CharacterDetailViewModel
+    private var viewModel: CharacterDetailViewModel
     
     init(frame: CGRect, viewModel: CharacterDetailViewModel) {
         self.viewModel = viewModel
@@ -158,22 +164,46 @@ extension CharacterDetailView: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let sectionType = viewModel.sections[indexPath.section]
         switch sectionType {
-        case .photo:
-            return dequeueCell(CharacterPhotoCollectionViewCell.self, for: indexPath)
-        case .information:
-            return dequeueCell(CharacterInfoCollectionViewCell.self, for: indexPath)
-        case .episodes:
-            return dequeueCell(CharacterEpisodeCollectionViewCell.self, for: indexPath)
+        case .photo(let viewModel):
+            guard let cell = dequeueCell(CharacterPhotoCollectionViewCell.self, for: indexPath) else {
+                return UICollectionViewCell()
+            }
+            cell.configure(viewModel: viewModel)
+            return cell
+        case .information(let viewModels):
+            guard let cell = dequeueCell(CharacterInfoCollectionViewCell.self, for: indexPath) else {
+                return UICollectionViewCell()
+            }
+            cell.configure(viewModel: viewModels[indexPath.row])
+            return cell
+        case .episodes(let viewModels):
+            guard let cell = dequeueCell(CharacterEpisodeCollectionViewCell.self, for: indexPath) else {
+                return UICollectionViewCell()
+            }
+            let viewModel = viewModels[indexPath.row]
+            cell.configure(viewModel: viewModel)
+            return cell
         }
     }
     
-    func dequeueCell<T: UICollectionViewCell>(_ cellType: T.Type, for indexPath: IndexPath) -> UICollectionViewCell {
+    func dequeueCell<T: UICollectionViewCell>(_ cellType: T.Type, for indexPath: IndexPath) -> T? {
         guard let cell = collectionView.dequeueReusableCell(
             cellType,
             for: indexPath
         ) else {
-            return UICollectionViewCell()
+            return nil
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sectionType = viewModel.sections[indexPath.section]
+        switch sectionType {
+        case .episodes(let viewModels):
+            let viewModel = viewModels[indexPath.row]
+            delegate?.didTapEpisode(episodeUrl: viewModel.episodeDataUrl)
+        default:
+            break
+        }
     }
 }

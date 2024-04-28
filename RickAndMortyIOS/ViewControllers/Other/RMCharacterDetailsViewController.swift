@@ -21,6 +21,7 @@ final class RMCharacterDetailsViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -66,6 +67,8 @@ final class RMCharacterDetailsViewController: UIViewController {
     }
     
     private func bindViews() {
+        detailView.delegate = self
+        
         let input = CharacterDetailViewModel.Input(
             fetchCharacterStream: .just(())
         )
@@ -77,5 +80,13 @@ final class RMCharacterDetailsViewController: UIViewController {
            
             
         }).disposed(by: disposeBag)
+    }
+}
+
+
+extension RMCharacterDetailsViewController: CharacterDetailViewDelegate {
+    func didTapEpisode(episodeUrl: URL?) {
+        let vc = RMEpisodeDetailViewController(url: episodeUrl)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
