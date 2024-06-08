@@ -15,17 +15,17 @@ struct CharacterListViewViewModel {
     }
     
     struct Output {
-        var characterResponseStream: Driver<GetAllCharactersResponse>
+        var characterResponseStream: Driver<PaginationResponse<Character>>
         var isLoadingStream: Driver<Bool>
     }
     
-    private func fetchCharacters(page: Int) -> Observable<GetAllCharactersResponse> {
+    private func fetchCharacters(page: Int) -> Observable<PaginationResponse<Character>> {
         return Observable.create { observer in
             let request = RMRequest(
                 endpoint: .character,
                 queryParameters: [URLQueryItem(name: "page", value: "\(page)")]
             )
-            RMService.shared.execute(request, expecting: GetAllCharactersResponse.self) { result in
+            RMService.shared.execute(request, expecting: PaginationResponse<Character>.self) { result in
                 switch result {
                 case .success(let response):
                     observer.onNext(response)
@@ -52,7 +52,7 @@ struct CharacterListViewViewModel {
         return Output(
             characterResponseStream: characterResponseStream.asDriver(
                 onErrorJustReturn:
-                    GetAllCharactersResponse.empty
+                    PaginationResponse<Character>.empty
             ),
             isLoadingStream: activityIndicator.asDriver(onErrorJustReturn: false)
         )

@@ -40,3 +40,15 @@ extension Driver {
         .asDriver(onErrorDriveWith: .empty())
     }
 }
+
+extension SharedSequenceConvertibleType where Self.SharingStrategy == RxCocoa.DriverSharingStrategy {
+    @inline(__always)
+    public func driveNext(_ onNext: ((Self.Element) -> Void)?) -> Disposable {
+        drive(onNext: onNext)
+    }
+
+    @inline(__always)
+    public func doNext(_ onNext: ((Self.Element) -> Void)?) -> SharedSequence<DriverSharingStrategy, Self.Element> {
+        self.do(onNext: onNext)
+    }
+}

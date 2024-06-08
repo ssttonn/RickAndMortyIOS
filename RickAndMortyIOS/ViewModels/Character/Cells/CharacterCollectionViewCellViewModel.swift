@@ -9,30 +9,28 @@ import Foundation
 
 
 struct CharacterCollectionViewCellViewModel {
-    private let characterName: String
-    private let characterStatus: CharacterStatus
-    private let characterImageUrl: URL?
+    private let character: Character
     
     init(
-        characterName: String,
-        characterStatus: CharacterStatus,
-        characterImageUrl: URL?
+        character: Character
     ) {
-        self.characterName = characterName
-        self.characterStatus = characterStatus
-        self.characterImageUrl = characterImageUrl
+        self.character = character
     }
     
     public var characterStatusText: String {
-        "Status: \(characterStatus.rawValue)"
+        "Status: \(self.character.status.rawValue)"
+    }
+    
+    public var currentCharacter: Character {
+        self.character
     }
     
     public var name: String {
-        self.characterName
+        self.character.name
     }
     
     public func fetchImage(completion: @escaping (Result<Data, Error>) -> Void) {
-        guard let characterImageUrl else {
+        guard let characterImageUrl = URL(string: character.image) else {
             completion(.failure(URLError(.badURL)))
             return
         }

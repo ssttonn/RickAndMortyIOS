@@ -15,7 +15,7 @@ protocol CharacterListViewDelegate: AnyObject {
 final class CharacterListView: UIView {
     private let viewModel = CharacterListViewViewModel()
     private let disposeBag = DisposeBag()
-    private var characters: GetAllCharactersResponse = GetAllCharactersResponse(results: [], info: GetAllCharactersResponse.Info(count: 0, pages: 0, next: "", prev: ""))
+    private var characters: PaginationResponse<Character> = PaginationResponse<Character>.empty
     private var currentPage = 1
     weak var delegate: CharacterListViewDelegate?
     
@@ -85,11 +85,10 @@ final class CharacterListView: UIView {
                 newIndexPaths.append(IndexPath(row: item + characters.results.count, section: 0))
             }
             
-            self.characters = GetAllCharactersResponse(
-                results: self.characters.results + characterResponse.results,
-                info: characterResponse.info)
-            
             self.collectionView.performBatchUpdates {
+                self.characters = PaginationResponse<Character>(
+                    results: self.characters.results + characterResponse.results,
+                    info: characterResponse.info)
                 self.collectionView.insertItems(at: newIndexPaths)
                 if self.collectionView.alpha == 0 || self.collectionView.isHidden {
                     UIView.animate(withDuration: 0.4) {
@@ -124,9 +123,7 @@ extension CharacterListView: UICollectionViewDataSource, UICollectionViewDelegat
         }
         let character = characters.results[indexPath.row]
         let viewModel = CharacterCollectionViewCellViewModel(
-            characterName: character.name,
-            characterStatus: character.status,
-            characterImageUrl: URL(string: character.image)
+           character: character
         )
         cell.configure(with: viewModel)
         return cell

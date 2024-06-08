@@ -21,7 +21,7 @@ struct EpisodeDetailViewModel {
     }
     
     struct Output {
-        let episode: Driver<Episode>
+        let episodeStream: Driver<Episode>
     }
     
     func transform(input: Input) -> Output {
@@ -50,8 +50,8 @@ struct EpisodeDetailViewModel {
                 }
             }.asDriver(onErrorJustReturn: nil)
         
-        return Output(episode: episodeStream.compactMap{$0})
+        return Output(
+            episodeStream: episodeStream.compactMap{$0}
+        )
     }
-    
-  
 }

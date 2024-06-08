@@ -36,26 +36,53 @@ class RMEpisodeDetailViewController: UIViewController {
     
     private func setupSubviews() {
         view.addSubview(detailView)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapShare))
+    }
+    
+    @objc private func didTapShare() {
+        shareTapSubject.onNext(())
     }
 
     private func setupViewConstraints() {
         detailView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
         }
     }
     
+  
     private func visualizeViews() {
         view.backgroundColor = .systemBackground
+        navigationItem.largeTitleDisplayMode = .never
     }
     
+    private let shareTapSubject = PublishSubject<Void>()
+    
     private func bindViews(){
+        detailView.delegate = self
+        
         let input = EpisodeDetailViewModel.Input(fetchEpisodeStream: rx.viewDidAppear.mapToVoid().take(1))
         
         let output = viewModel.transform(input: input)
         
-        output.episode.drive(onNext: { [weak self] episode in
+        output.episodeStream.drive(onNext: { [weak self] episode in
             guard let self else {return}
-            detailView.configure(with: episode)
+            detailView.configure(with: EpisodeDetailViewViewModel(episode: episode))
         }).disposed(by: disposeBag)
+        
+        shareTapSubject.withLatestFrom(output.episodeStream).subscribeNext { [weak self] episode in
+            guard let self else {return}
+            
+            let activityViewController = UIActivityViewController(activityItems: [episode.url], applicationActivities: nil)
+            present(activityViewController, animated: true)
+        }.disposed(by: disposeBag)
+    }
+}
+
+extension RMEpisodeDetailViewController: EpisodeDetailViewDelegate {
+    func didTapCharacter(character: Character) {
+        let characterDetailViewController = RMCharacterDetailsViewController(
+            viewModel: CharacterDetailViewModel(character: character)
+        )
+        navigationController?.pushViewController(characterDetailViewController, animated: true)
     }
 }
